@@ -104,6 +104,9 @@ body{
     transition: 0.1s;
 }
 .percent{
+    
+    width: 100%;
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -121,6 +124,7 @@ body{
     font-family: 500;
     font-size: 20px;
     text-transform: uppercase;
+    font-weight: 1000;
 }
 .loading h2 .cricle1, .cricle2, .cricle3{
     color: rgb(244,118,121);
@@ -234,4 +238,64 @@ body{
     background-color: #fff;
     bottom: 50%;
     border-radius: 50%;
+}
+
+.moving-image {
+    position: fixed;
+    transition: left 0.1s linear; /* Tùy chỉnh thời gian chuyển động */
+}
+
+
+body {
+    background-image: url('./image/yourImage.jpg'); /* Đường dẫn đến ảnh của bạn */
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease; /* Tạo hiệu ứng khi thay đổi độ đậm của ảnh */
+    opacity: 0; /* Bắt đầu với độ mờ */
+}
+
+
+/* Modal styles */
+.modal {
+    display: none; /* Ẩn modal */
+    position: fixed;
+    z-index: 1000; /* Đặt modal ở trên cùng */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Nền tối */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c62828;
 }

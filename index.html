@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,18 @@
     <script src="./app.js" defer></script>
     <title>Document</title>
 </head>
+
 <body>
+    <!-- Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Khoan đã, em có còn giận anh không?</h2>
+            <button id="noButton">Có</button>
+            <button id="yesButton">Không</button>
+        </div>
+    </div>
+    <img src="./image/anhLankKhai.jpg" alt="" class="moving-image">
     <div class="loading">
         <div class="boxHeartImg">
             <div class="heartItem item1">
@@ -28,7 +40,7 @@
             <div class="percent">100%</div>
         </div>
         <h2 class="textBox">
-            <span class="textLoad">loading love</span>
+            <span class="textLoad">loading love ... </span>
             <span class="cricle1">.</span>
             <span class="cricle2">.</span>
             <span class="cricle3">.</span>
@@ -41,4 +53,5 @@
         </div>
     </div>
 </body>
+
 </html>

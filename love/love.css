@@ -18,7 +18,7 @@ body{
 .formInput{
     position: absolute;
     top: -100%;
-    width: 40%;
+    width: 80%;
     left: 50%;
     transform: translateX(-50%);
     background-color: #EA4C89;
@@ -33,6 +33,7 @@ body{
     padding-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     animation: formInput 1s 3s forwards;
+
 }
 @keyframes formInput {
     0%{
@@ -142,10 +143,10 @@ body{
     z-index: 50;
 }
 .left{
-    left: 100px;
+    left: 10%;
 }
 .right{
-    right: 100px;
+    right: 10%;
 }
 
 .listSlider{
@@ -183,9 +184,31 @@ body{
         right: 0%;
     }
 }
+
+/* CSS cho điện thoại */
+@media only screen and (max-width: 768px) {
+    .boxHandsInput input{
+        /* width: 100%; */
+        height: 30px;
+        transform: translateX(-25);
+        margin: auto;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 0px 10px;
+        font-family: 'Dancing Script', cursive;
+        font-size: 20px;
+        z-index: 11;
+        opacity: 0;
+        animation: boxSlider 1s 9s forwards ease-out;
+    }
+    
+}
+
 .boxHandsInput input{
-    width: 100%;
+    /* width: 100%; */
     height: 30px;
+    margin: auto;
     border: none;
     outline: none;
     border-radius: 5px;
@@ -271,6 +294,8 @@ body{
     bottom: 15%;
     transform: translateX(-400px);
     z-index: 2;
+    
+    left: -116px;
     animation: car 4s 1s forwards, car1 2s 5s forwards;
 }
 .boxCar img{
@@ -702,3 +727,11 @@ body{
 
 
 
+
+.popupImageContainer {
+    display: none; /* Ẩn mặc định, chỉ hiển thị khi người dùng click */
+    text-align: center;
+}
+.popupImage {
+    max-width: 100%; /* Đảm bảo ảnh không vượt quá kích thước của popup */
+}
